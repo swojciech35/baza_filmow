@@ -1,3 +1,4 @@
+import '../App.css';
 import Logo from "./elements/Logo";
 import Search from "./elements/Search";
 import Button from "./elements/Button";
@@ -6,14 +7,14 @@ const HomePage= ()=>{
 
     return(
         <>
-        <div style={{background: "linear-gradient(170deg, rgba(9,9,121,1) 0%, rgba(186,186,186,1) 100%)",padding:"3%"}}>
-            <div style={{display: "flex",margin:1,alignItems:"center",alignContent:'space-between'}}>
+        <div className="hp-background">
+            <div className='hp-header'>
                 <Logo></Logo>
                 <Search ></Search>
                 <Button></Button>
 
             </div>
-            <div style={{flexDirection:"row",display:"flex",alignItems:"center",justifyContent:"space-evenly",marginTop:"1%",flexWrap:"wrap",alignContent:"space-between",paddingBottom:"2%"}}>
+            <div className="hp-filmCard">
                 <FilmCard
                     image={"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/239px-American_Beaver.jpg"}
                     title={"Przygody Bobra Andrzeja"}

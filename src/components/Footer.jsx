@@ -1,8 +1,9 @@
+import '../App.css';
 const Footer= ()=>{
 
     return(
-        <footer style={{display:"flex",backgroundColor:"#7d7d7d",justifyContent:"center"}}>
-             <a>Copyright &copy; Baza filmów</a>
+        <footer className="footerstyle">
+             <a>Copyright &copy; Baza filmów Wojciech Schabowski</a>
              
         </footer>
     );

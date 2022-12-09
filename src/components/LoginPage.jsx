@@ -1,10 +1,11 @@
 import Logo from "./elements/Logo";
+import '../App.css';
 const LoginPage=()=>{
     return(
     <>
-    <div style={{ minHeight: "100vh", background: "linear-gradient(160deg, rgba(9,9,121,1) 0%, rgba(186,186,186,1) 100%)", justifyContent: "flex-start", alignItems: "center", display: "flex", flexDirection: "column" }}>
+    <div  className="loginPage" >
             <Logo></Logo>
-            <form style={{marginTop:"3%", width: "25%", borderWidth: 2, borderStyle: "solid", padding: "2%" }}>
+            <form className="login-formStyle">
                 <h2>Zaloguj się:</h2>
                 <div class="form-group" style={{ paddingTop: 30 }}>
                     <label for="formGroupExampleInput"><h4>Login:</h4> </label>
@@ -14,7 +15,7 @@ const LoginPage=()=>{
                     <label for="formGroupExampleInput2"><h4>Hasło:</h4> </label>
                     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Hasło" />
                 </div>
-                <div style={{paddingTop:30,justifyContent:"center" ,alignItems:"center",display:"flex",}}>
+                <div className="login-buttonLogin">
                     <button type="button" class="btn btn-secondary">Zaloguj się</button>
                 </div>
             </form>

@@ -27,7 +27,62 @@
 .App-link {
   color: #61dafb;
 }
+.hp-background{
+  background: linear-gradient(170deg, rgba(9,9,121,1) 0%, rgba(186,186,186,1) 100%);
+  padding:3%
+}
+.hp-filmCard{
+  flex-direction:row;
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+  margin-top:1%;
+  flex-wrap:wrap;
+  align-content:space-between;
+  padding-bottom:2%
+}
+.hp-header{
+  display: flex;
+  margin:1;
+  align-items:center;
+  align-content:space-between
+}
+.loginPage{
+  min-height: 96.5vh; 
+  background: linear-gradient(160deg, rgba(9,9,121,1) 0%, rgba(186,186,186,1) 100%);
+  justify-content: flex-start; 
+  align-items: center; 
+  display: flex;
+  flex-direction: column
 
+}
+.login-formStyle{
+  margin-top:3%; 
+  width: 25%; 
+  border-width: 2px; 
+  border-style: solid; 
+  padding: 2% 
+}
+.login-buttonLogin{
+  padding-top: 30px;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+
+}
+.footerstyle{
+  display:flex;
+  background-color:#7d7d7d;
+  justify-content:center
+}
+.filmCard{
+  flex-direction:column;
+  display:flex;margin-top:2%;
+  border-width:2px;
+  border-style:solid;
+  background-color:#696969;
+  padding:3px
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
