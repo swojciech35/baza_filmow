@@ -29,7 +29,8 @@
 }
 .hp-background{
   background: linear-gradient(170deg, rgba(9,9,121,1) 0%, rgba(186,186,186,1) 100%);
-  padding:3%
+  padding:3%;
+  min-height: 96.5vh; 
 }
 .hp-filmCard{
   flex-direction:row;
