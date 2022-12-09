@@ -2,7 +2,7 @@ import Logo from "./elements/Logo";
 const LoginPage=()=>{
     return(
     <>
-    <div style={{ minHeight: "100vh", backgroundColor: "#bababa", justifyContent: "flex-start", alignItems: "center", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", background: "linear-gradient(160deg, rgba(9,9,121,1) 0%, rgba(186,186,186,1) 100%)", justifyContent: "flex-start", alignItems: "center", display: "flex", flexDirection: "column" }}>
             <Logo></Logo>
             <form style={{marginTop:"3%", width: "25%", borderWidth: 2, borderStyle: "solid", padding: "2%" }}>
                 <h2>Zaloguj się:</h2>

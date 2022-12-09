@@ -6,7 +6,7 @@ const HomePage= ()=>{
 
     return(
         <>
-        <div style={{backgroundColor:"#bababa"}}>
+        <div style={{background: "linear-gradient(170deg, rgba(9,9,121,1) 0%, rgba(186,186,186,1) 100%)",padding:"3%"}}>
             <div style={{display: "flex",margin:1,alignItems:"center",alignContent:'space-between'}}>
                 <Logo></Logo>
                 <Search ></Search>

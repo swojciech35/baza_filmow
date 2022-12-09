@@ -6,9 +6,10 @@ import LoginPage from './components/LoginPage';
 function App() {
   return (
     <>
-    {/* <HomePage></HomePage>
-    <Footer/> */}
-    <LoginPage/>
+     <HomePage></HomePage>
+   
+    {/* <LoginPage/> */}
+    <Footer/>
     </>
   );
 }
