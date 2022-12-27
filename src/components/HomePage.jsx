@@ -11,7 +11,17 @@ const HomePage= ()=>{
             <div className='hp-header'>
                 <Logo></Logo>
                 <Search ></Search>
-                <Button></Button>
+                <Button
+                text={"DODAJ FILM"}
+                link={"/signin"}
+                />
+                <Button
+                text={"Zaloguj się "}
+                link={"/signin"}
+                /><Button
+                text={"Zarejestruj się  "}
+                link={"/signup"}
+                />
 
             </div>
             <div className="hp-filmCard">
