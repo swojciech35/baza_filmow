@@ -13,7 +13,7 @@ const HomePage= ()=>{
                 <Search ></Search>
                 <Button
                 text={"DODAJ FILM"}
-                link={"/signin"}
+                link={"/add"}
                 />
                 <Button
                 text={"Zaloguj się "}
