@@ -82,7 +82,10 @@
   border-width:2px;
   border-style:solid;
   background-color:#696969;
-  padding:3px
+  padding:3px;
+  border-color: black;
+  color:black;
+
 }
 @keyframes App-logo-spin {
   from {
@@ -91,4 +94,5 @@
   to {
     transform: rotate(360deg);
   }
+  
 }
