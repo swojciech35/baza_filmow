@@ -1,19 +1,34 @@
 import Logo from "./elements/Logo";
 import "../App.css";
-import FilmCard from "./FilmCard";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 const DetailsPage = (props) => {
+  const [movie, setMovie] = useState([]);
+  const { movieId } = useParams();
+
+  function getFilm() {
+    axios.get(`https://at.usermd.net/api/movies/${movieId}`).then((res) => {
+      const data = res.data;
+      setMovie(data);
+    });
+  }
+
+  useEffect(() => {
+    getFilm();
+  }, []);
   return (
     <>
       <div className="loginPage">
         <Logo></Logo>
-        <FilmCard
-          image={
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/239px-American_Beaver.jpg"
-          }
-          title={"Przygody Bobra Andrzeja"}
-          opis={"Andrzej to dobry bóbr"}
-          rate={"9/10"}
-        />
+        <div className="filmCard">
+          <img src={movie.image} alt="image" width="239" height="240" />
+          <p>
+            <strong>{movie.title}</strong>
+          </p>
+          <p>{movie.content}</p>
+          <div style={{ flexDirection: "row" }}></div>
+        </div>
       </div>
     </>
   );

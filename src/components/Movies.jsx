@@ -21,6 +21,7 @@ const Movies = () => {
             image={movie.image}
             title={movie.title}
             opis={movie.content}
+            id={movie.id}
           />
         ))}
       </div>

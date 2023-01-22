@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const FilmCard = (props) => {
   return (
     <>
-      <Link style={{ textDecoration: "none" }} to="/details">
+      <Link style={{ textDecoration: "none" }} to={`/details/${props.id}`}>
         <div className="filmCard">
           <img src={props.image} alt="image" width="239" height="240" />
           <p>
