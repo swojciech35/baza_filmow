@@ -16,6 +16,8 @@ const AddMoviePage = () => {
         image: image,
         content: content,
       },
+    }).then((response) => {
+      window.location.replace("/");
     });
   };
   return (
