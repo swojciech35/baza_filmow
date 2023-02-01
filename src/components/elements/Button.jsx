@@ -4,7 +4,7 @@ const Button= (props)=>{
     return(
         // <button style={{width:'13%',marginRight:"2%"}} type="button" class="btn btn-secondary btn-sm">Zaloguj się</button>
         <div style={{marginLeft:10,marginRight:10}}>
-        <div  class="btn btn-secondary btn-sm">
+        <div  class="btn btn-secondary btn-sm" onClick={props.fun}>
 
        
         <Link to={props.link} className="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"

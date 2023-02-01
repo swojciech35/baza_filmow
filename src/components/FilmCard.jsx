@@ -6,7 +6,7 @@ const FilmCard = (props) => {
     <>
       <Link style={{ textDecoration: "none" }} to={`/details/${props.id}`}>
         <div className="filmCard">
-          <img src={props.image} alt="image" width="239" height="240" />
+          <img src={props.image} alt="image" width="239" heightMax="310" />
           <p>
             <strong>{props.title}</strong>
           </p>

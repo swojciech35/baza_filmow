@@ -18,6 +18,7 @@ const RegisterPage = () => {
       },
     }).then((response) => {
       console.log(response);
+      window.location.replace("/signin");
     });
   };
   return (
