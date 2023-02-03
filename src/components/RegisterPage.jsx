@@ -1,7 +1,31 @@
 import Logo from "./elements/Logo";
 import "../App.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 const RegisterPage = () => {
+  const [login, setLogin] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const signUp = () => {
+    axios({
+      method: "post",
+      url: "https://at.usermd.net/api/user/create",
+      data: {
+        name: login,
+        email: email,
+        password: password,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        window.location.replace("/signin");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Użytkownik o podanych danych już istnieje");
+      });
+  };
   return (
     <>
       <div className="loginPage">
@@ -18,9 +42,10 @@ const RegisterPage = () => {
               class="form-control"
               id="formGroupExampleInput"
               placeholder="Login"
+              onChange={(e) => setLogin(e.target.value)}
             />
           </div>
-          <div class="form-group" style={{ paddingTop: 30 }}>
+          {/* <div class="form-group" style={{ paddingTop: 30 }}>
             <label for="formGroupExampleInput2">
               <h4>Nazwa:</h4>{" "}
             </label>
@@ -30,7 +55,7 @@ const RegisterPage = () => {
               id="formGroupExampleInput2"
               placeholder="Nazwa"
             />
-          </div>
+          </div> */}
           <div class="form-group" style={{ paddingTop: 30 }}>
             <label for="formGroupExampleInput2">
               <h4>Email:</h4>{" "}
@@ -40,6 +65,7 @@ const RegisterPage = () => {
               class="form-control"
               id="formGroupExampleInput2"
               placeholder="email"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div class="form-group" style={{ paddingTop: 30 }}>
@@ -51,10 +77,21 @@ const RegisterPage = () => {
               class="form-control"
               id="formGroupExampleInput2"
               placeholder="Hasło"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="login-buttonLogin">
-            <button type="button" class="btn btn-secondary">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onClick={() => {
+                if (login != null && email != null && password != null) {
+                  signUp();
+                } else {
+                  alert("Uzupełnij dane do rejestracji");
+                }
+              }}
+            >
               zarejestruj się
             </button>
           </div>
