@@ -67,7 +67,11 @@ const AddMoviePage = () => {
               type="button"
               class="btn btn-secondary"
               onClick={() => {
+                if(title!=null&&image!=null&&content!=null){
                 addMovie(title, image, content);
+              }else{
+                alert("Podaj wszystkie dane filmu");
+              }
               }}
             >
               Dodaj film

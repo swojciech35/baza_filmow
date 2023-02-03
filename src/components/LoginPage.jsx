@@ -13,11 +13,16 @@ const LoginPage = () => {
         login: login,
         password: password,
       },
-    }).then((response) => {
-      localStorage.setItem("token", response.data.token);
-      console.log(response.data.token);
-      window.location.replace("/");
-    });
+    })
+      .then((response) => {
+        localStorage.setItem("token", response.data.token);
+        console.log(response.data.token);
+        window.location.replace("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Podaj poprawne dane Logowania");
+      });
   };
   return (
     <>
@@ -53,7 +58,13 @@ const LoginPage = () => {
             <button
               type="button"
               class="btn btn-secondary"
-              onClick={() => signIn()}
+              onClick={() => {
+                if (login != null && password != null) {
+                  signIn();
+                }else{
+                  alert("Uzupełnij dane do logowania")
+                }
+              }}
             >
               Zaloguj się
             </button>

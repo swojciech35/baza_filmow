@@ -16,10 +16,15 @@ const RegisterPage = () => {
         email: email,
         password: password,
       },
-    }).then((response) => {
-      console.log(response);
-      window.location.replace("/signin");
-    });
+    })
+      .then((response) => {
+        console.log(response);
+        window.location.replace("/signin");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Użytkownik o podanych danych już istnieje");
+      });
   };
   return (
     <>
@@ -79,7 +84,13 @@ const RegisterPage = () => {
             <button
               type="button"
               class="btn btn-secondary"
-              onClick={() => signUp()}
+              onClick={() => {
+                if (login != null && email != null && password != null) {
+                  signUp();
+                } else {
+                  alert("Uzupełnij dane do rejestracji");
+                }
+              }}
             >
               zarejestruj się
             </button>
